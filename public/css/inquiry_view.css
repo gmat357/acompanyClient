@@ -120,7 +120,6 @@
 .board_container table tr:nth-of-type(2) td #text {
   width: 97.5%;
   white-space: pre-line;
-  overflow: scroll;
   height: auto;
   padding: 15px;
   margin: 10px 0;
