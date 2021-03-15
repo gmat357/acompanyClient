@@ -12,13 +12,19 @@ router.use(bodyParser.json());
 
 router.get('/',(req,res)=>{
     db.query('select * from link',(err,rows)=>{
-        if(err) throw err;
-        var render = {
-            header:layout.header.header(),
-            nav:layout.nav.nav(),
-            footer:layout.footer.footer(rows)
-        }
-        res.render('index',render);
+        db.query('select * from slide',(err2, rows2)=>{
+
+            if(err) throw err;
+            var render = {
+                header:layout.header.header(),
+                nav:layout.nav.nav(),
+                slide1:rows2[0].url,
+                slide2:rows2[1].url,
+                slide3:rows2[2].url,
+                footer:layout.footer.footer(rows)
+            }
+            res.render('index',render);
+        })
     });
 });
 
