@@ -12,7 +12,7 @@ var fs = require('fs');
 var board_name = "event";
 var db_list_name = "event_list";
 var db_comment_name = "event_comment"
-var master_psw = "speed";
+var master_psw = "eotjdzjavjsl";
 
 router.use(bodyParser.urlencoded({extended:false}));
 router.use(bodyParser.json());

@@ -9,7 +9,7 @@ var db = require('../lib/mysql').db();
 var board_name = "review";
 var db_list_name = "review_list";
 var db_comment_name = "review_comment"
-var master_psw = "speed";
+var master_psw = "eotjdzjavjsl";
 
 router.use(bodyParser.urlencoded({extended:false}));
 router.use(bodyParser.json());
