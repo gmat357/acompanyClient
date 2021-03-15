@@ -36,7 +36,7 @@
 
 .board_container {
   width: 1920px;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
   border: 1px solid white;
   text-align: center;
@@ -66,6 +66,7 @@
 
 .board_container table {
   width: 1200px;
+  height: auto;
   border-top: 2px solid #545454;
   border-bottom: 2px solid #545454;
   text-align: center;

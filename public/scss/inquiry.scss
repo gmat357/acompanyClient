@@ -3,7 +3,7 @@
 
 .board_container {
   width: $layout_width;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
   border: 1px solid white;
   text-align: center;
@@ -27,6 +27,7 @@
   }
   table {
     width: $content_width;
+    height:auto;
     border-top: 2px solid #545454;
     border-bottom: 2px solid #545454;
     text-align: center;
