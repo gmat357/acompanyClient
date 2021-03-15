@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var db = require('../lib/mysql').db();
-var date = require('../lib/date').date();
+
 
 var layout = require('../lib/layout').layout();
 
@@ -39,11 +39,12 @@ router.post('/remote_consulting',(req,res)=>{
     var text = body.text;
     var privacy = body.privacy;
     var category = body.category;
+    var date = require('../lib/date').date();
     sql = {
         name:name,
         phone:phone,
-        title:"빠른 상담 요청!!",
-        text:"빠른상담 요청드립니다.",
+        title:"빠른 상담 요청!! (REMOTE)",
+        text:"빠른 상담 부탁드립니다.",
         privacy:privacy,
         category:category,
         insert_date:date,
@@ -77,10 +78,11 @@ router.post('/main_consulting',(req,res)=>{
     var text = body.text;
     var privacy = body.privacy;
     var category = "빠른상담";
+    var date = require('../lib/date').date();
     sql = {
         name:name,
         phone:phone,
-        title:"빠른 상담 요청!!",
+        title:"빠른 상담 요청드립니다!! (MAIN)",
         text:text,
         privacy:privacy,
         category:category,

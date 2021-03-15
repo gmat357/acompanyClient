@@ -53,8 +53,8 @@ exports.footer = (rows)=>{
                 <em>!</em>
                 </div>
             </form>
-            <a href="${kakao}"><img src="../public/img/footer/kakao.png" alt="카카오톡상담"/></a>
-            <a href="${naver}"><img src="../public/img/footer/naver.png" alt="네이버톡톡상담"/></a>
+            <a href="${kakao}" target="blank"><img src="../public/img/footer/kakao.png" alt="카카오톡상담"/></a>
+            <a href="${naver}" target="blank"><img src="../public/img/footer/naver.png" alt="네이버톡톡상담"/></a>
             <div class="top_btn">TOP</div>
             <script src="../public/js/footer/index.js"></script>
         </div>
