@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500&display=swap");
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+.nanumbarungothic * {
+  font-family: "NanumBarunGothic", sans-serif;
+}
+
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.board_container {
+  width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.board_container img {
+  margin: 57px 0;
+}
+
+.board_container .function_box {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.board_container .function_box .write_btn {
+  position: absolute;
+  right: -4px;
+  top: -50px;
+  display: none;
+}
+
+.board_container table {
+  width: 1200px;
+  border-top: 2px solid #545454;
+  border-bottom: 2px solid #545454;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: "KOTRA_BOLD-Bold", sans-serif;
+  color: #2a2a2a;
+  margin: 0 auto 110px;
+  font-size: 11px;
+}
+
+.board_container table tr {
+  height: 30px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.board_container table tr td:nth-of-type(odd) {
+  width: 12%;
+  background-color: #f6f6f6;
+}
+
+.board_container table tr td:nth-of-type(even) {
+  width: 10%;
+}
+
+.board_container table tr td:nth-of-type(even) input[type="text"] {
+  width: 96%;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+.board_container table tr td:nth-of-type(even) #title {
+  width: 540px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.board_container table tr td:nth-of-type(even) #name {
+  width: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.board_container table tr td:nth-of-type(even) select {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.board_container table tr:nth-of-type(2) td {
+  background-color: white;
+}
+
+.board_container table tr:nth-of-type(2) td #text {
+  width: 97.5%;
+  white-space: pre-line;
+  height: auto;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #c8c8c8;
+  resize: none;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.board_container table tr:nth-of-type(2) td #text img {
+  width: 100%;
+}
+
+.board_container table tr:nth-of-type(3) td {
+  background-color: white;
+  text-align: right;
+  padding: 20px 0;
+}
+
+.board_container table tr:nth-of-type(3) td .insert_btn,
+.board_container table tr:nth-of-type(3) td .delete_btn,
+.board_container table tr:nth-of-type(3) td .update_btn,
+.board_container table tr:nth-of-type(3) td a {
+  padding: 5px 30px;
+  background-color: #4c4c4c;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  cursor: pointer;
+  float: right;
+  margin: 0 2px;
+}
+
+.board_container table tr:nth-of-type(3) td img {
+  margin: 10px 0;
+}
+
+.comment_container {
+  width: 1920px;
+}
+
+.comment_container table {
+  width: 1200px;
+  margin: 50px auto;
+  border-top: 2px solid #545454;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: "KOTRA_BOLD-Bold", sans-serif;
+  font-size: 11px;
+}
+
+.comment_container table tr {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.comment_container table thead tr {
+  height: 30px;
+}
+
+.comment_container table tbody tr {
+  height: auto;
+}
+
+.comment_container table tbody tr td img {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.comment_container table tbody tr td:nth-of-type(3) {
+  width: 700px;
+}
+
+.comment_container table tbody tr td:nth-of-type(3) textarea {
+  width: 98%;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 15px;
+  font-family: "KOTRA_BOLD-Bold", sans-serif;
+}
+
+.comment_container .paging_box {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.comment_container .paging_box span {
+  height: 20px;
+  border: 1px solid #cccccc;
+  margin: 5px;
+  padding: 0px 10px;
+  font-size: 12px;
+  display: inline-block;
+  color: #444444;
+  cursor: pointer;
+}
+
+.comment_container .paging_box span img {
+  width: 10px;
+}
+
+.comment_container .paging_box .prev {
+  float: left;
+}
+
+.comment_container .paging_box .prev img {
+  margin: 5px 0;
+}
+
+.comment_container .paging_box .next {
+  float: right;
+}
+
+.comment_container .paging_box .next img {
+  margin: 5px 0;
+}
+
+.comment_form_container {
+  width: 1920px;
+}
+
+.comment_form_container table {
+  width: 1200px;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 50px auto;
+  border-top: 2px solid #545454;
+  font-size: 11px;
+  font-family: "KOTRA_BOLD-Bold", sans-serif;
+}
+
+.comment_form_container table thead tr {
+  height: 50px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.comment_form_container table thead tr:nth-of-type(1) {
+  background-color: #f6f6f6;
+}
+
+.comment_form_container table thead tr:nth-of-type(1) td:nth-of-type(2) input,
+.comment_form_container table thead tr:nth-of-type(1) td:nth-of-type(4) input {
+  height: 15px;
+  outline: none;
+  border: 1px solid #cccccc;
+  float: left;
+  padding: 5px;
+}
+
+.comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(1) {
+  border-right: 1px solid #cccccc;
+}
+
+.comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) textarea {
+  width: 88%;
+  height: 100px;
+  float: left;
+  resize: none;
+  outline: none;
+  border: none;
+  padding: 15px;
+}
+
+.comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) input {
+  float: left;
+  width: 9%;
+  height: 100px;
+  outline: none;
+  background-color: #3b95e8;
+  color: white;
+  font-family: "KOTRA_BOLD-Bold", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) input[type="button"] {
+  background-color: #444444;
+  height: 30px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .board_container .title_img {
+    margin-right: 590px;
+  }
+  .board_container table tr:nth-of-type(2) td #text {
+    height: 500px;
+  }
+  .comment_container table tbody tr td:nth-of-type(3) textarea {
+    height: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .board_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .board_container img {
+    margin: 57px 0;
+  }
+  .board_container .function_box {
+    width: auto;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .board_container table {
+    width: auto;
+    margin: 0 auto 110px;
+    font-size: 11px;
+  }
+  .board_container table tr {
+    height: 30px;
+  }
+  .board_container table tr td:nth-of-type(odd) {
+    width: 12%;
+  }
+  .board_container table tr td:nth-of-type(even) {
+    width: 10%;
+  }
+  .board_container table tr td:nth-of-type(even) input[type="text"] {
+    width: 96%;
+    height: 30px;
+    padding: 0 10px;
+  }
+  .board_container table tr td:nth-of-type(even) #title {
+    width: 300px;
+  }
+  .board_container table tr td:nth-of-type(even) #name {
+    width: 100px;
+  }
+  .board_container table tr td:nth-of-type(even) select {
+    width: 100%;
+    height: 30px;
+  }
+  .board_container table tr:nth-of-type(2) td #text {
+    width: auto;
+    white-space: pre-line;
+    height: 334px;
+    padding: 15px;
+    margin: 10px 0;
+  }
+  .board_container table tr:nth-of-type(2) td #text img {
+    width: 100%;
+  }
+  .board_container table tr:nth-of-type(3) td input[type="password"] {
+    width: 120px;
+    height: 23px;
+    padding: 0 10px;
+  }
+  .board_container table tr:nth-of-type(3) td .insert_btn,
+  .board_container table tr:nth-of-type(3) td .update_btn,
+  .board_container table tr:nth-of-type(3) td .delete_btn,
+  .board_container table tr:nth-of-type(3) td a {
+    padding: 5px 30px;
+    font-size: 11px;
+    margin: 10px 3px;
+  }
+  .board_container table tr:nth-of-type(3) td img {
+    margin: 10px 0;
+  }
+  .comment_container {
+    width: auto;
+  }
+  .comment_container table {
+    width: auto;
+  }
+  .comment_container table tbody tr td:nth-of-type(3) {
+    width: 500px;
+  }
+  .comment_form_container {
+    width: 100%;
+  }
+  .comment_form_container table {
+    width: 100%;
+  }
+  .comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) textarea {
+    width: 86.5%;
+  }
+  .comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) input {
+    float: right;
+  }
+}
+
+@media (max-width: 766px) {
+  .board_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid white;
+    text-align: center;
+  }
+  .board_container img {
+    margin: 57px 0;
+  }
+  .board_container .function_box {
+    width: auto;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .board_container .function_box .write_btn {
+    position: absolute;
+    right: -4px;
+    top: -50px;
+    display: none;
+  }
+  .board_container table {
+    width: auto;
+    border-top: 2px solid #545454;
+    border-bottom: 2px solid #545454;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+    color: #2a2a2a;
+    margin: 0 auto 110px;
+    font-size: 0.5em;
+  }
+  .board_container table tr {
+    height: 30px;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .board_container table tr td:nth-of-type(odd) {
+    width: 15%;
+    background-color: #f6f6f6;
+  }
+  .board_container table tr td:nth-of-type(even) {
+    width: 30%;
+  }
+  .board_container table tr td:nth-of-type(even) input[type="text"] {
+    font-size: 0.5em;
+    width: 96%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+  }
+  .board_container table tr td:nth-of-type(even) #title {
+    width: 80%;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .board_container table tr td:nth-of-type(even) #name {
+    width: 80%;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .board_container table tr td:nth-of-type(even) select {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .board_container table tr:nth-of-type(2) td {
+    background-color: white;
+  }
+  .board_container table tr:nth-of-type(2) td #text {
+    width: auto;
+    white-space: pre-line;
+    height: auto;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #c8c8c8;
+    resize: none;
+    outline: none;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .board_container table tr:nth-of-type(2) td #text img {
+    width: 100%;
+  }
+  .board_container table tr:nth-of-type(3) td {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .board_container table tr:nth-of-type(3) td .insert_btn,
+  .board_container table tr:nth-of-type(3) td .delete_btn,
+  .board_container table tr:nth-of-type(3) td .update_btn,
+  .board_container table tr:nth-of-type(3) td a {
+    padding: 5px 30px;
+    background-color: #4c4c4c;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 11px;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    cursor: pointer;
+    float: unset;
+    margin: 0 2px;
+  }
+  .board_container table tr:nth-of-type(3) td img {
+    margin: 10px 0;
+  }
+  .comment_container {
+    width: 100%;
+  }
+  .comment_container table {
+    width: 100%;
+    margin: 50px auto;
+    border-top: 2px solid #545454;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+    font-size: 11px;
+  }
+  .comment_container table tr {
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .comment_container table thead tr {
+    height: 30px;
+  }
+  .comment_container table tbody tr {
+    height: auto;
+  }
+  .comment_container table tbody tr td img {
+    margin: 5px;
+    cursor: pointer;
+  }
+  .comment_container table tbody tr td:nth-of-type(3) {
+    width: 700px;
+  }
+  .comment_container table tbody tr td:nth-of-type(3) textarea {
+    width: 98%;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 15px;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+  }
+  .comment_container .paging_box {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .comment_container .paging_box span {
+    height: 20px;
+    border: 1px solid #cccccc;
+    margin: 5px;
+    padding: 0px 10px;
+    font-size: 12px;
+    display: inline-block;
+    color: #444444;
+    cursor: pointer;
+  }
+  .comment_container .paging_box span img {
+    width: 10px;
+  }
+  .comment_container .paging_box .prev {
+    float: left;
+  }
+  .comment_container .paging_box .prev img {
+    margin: 5px 0;
+  }
+  .comment_container .paging_box .next {
+    float: right;
+  }
+  .comment_container .paging_box .next img {
+    margin: 5px 0;
+  }
+  .comment_form_container {
+    width: 100%;
+  }
+  .comment_form_container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 50px auto;
+    border-top: 2px solid #545454;
+    font-size: 11px;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+  }
+  .comment_form_container table thead tr {
+    height: 50px;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .comment_form_container table thead tr:nth-of-type(1) {
+    background-color: #f6f6f6;
+  }
+  .comment_form_container table thead tr:nth-of-type(1) td:nth-of-type(2) input,
+  .comment_form_container table thead tr:nth-of-type(1) td:nth-of-type(4) input {
+    width: 40%;
+    height: 15px;
+    outline: none;
+    border: 1px solid #cccccc;
+    float: left;
+    padding: 5px;
+  }
+  .comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(1) {
+    border-right: 1px solid #cccccc;
+  }
+  .comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) textarea {
+    width: 80%;
+    height: 100px;
+    float: left;
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 15px;
+  }
+  .comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) input {
+    float: right;
+    width: 9%;
+    height: 100px;
+    outline: none;
+    background-color: #3b95e8;
+    color: white;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  .comment_form_container table thead tr:nth-of-type(2) td:nth-of-type(2) input[type="button"] {
+    background-color: #444444;
+    height: 30px;
+  }
+}

@@ -1,0 +1,252 @@
+@import "variable";
+@import "font";
+
+.board_container {
+  width: $layout_width;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid white;
+  text-align: center;
+  img {
+    margin: 57px 0;
+  }
+  .function_box {
+    width: $content_width;
+    height: 50px;
+    margin: 0 auto;
+    .write_btn {
+      height: 36px;
+      position: relative;
+      float: right;
+      img {
+        position: absolute;
+        right: -4px;
+        top: -50px;
+      }
+    }
+  }
+  table {
+    width: $content_width;
+    border-top: 2px solid #545454;
+    border-bottom: 2px solid #545454;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+    color: #2a2a2a;
+    margin: 0 auto;
+    tr {
+      border-bottom: 1px solid #c8c8c8;
+      height: 35px;
+    }
+    thead {
+      tr {
+        background-color: #f5f5f5;
+        td {
+          font-size: 11px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 11px;
+          a {
+            color: #2a2a2a;
+          }
+        }
+      }
+    }
+  }
+  .paging_box {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    span {
+      height: 20px;
+      border: 1px solid #cccccc;
+      margin: 5px;
+      padding: 0px 10px;
+      font-size: 12px;
+      display: inline-block;
+      color: #444444;
+      cursor: pointer;
+      img {
+        width: 10px;
+      }
+    }
+    .prev {
+      float: left;
+      img {
+        margin: 5px 0;
+      }
+    }
+    .next {
+      float: right;
+      img {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .board_container {
+    .title_img {
+      margin-right: 590px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .board_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid white;
+    text-align: center;
+    img {
+      margin: 57px 0;
+    }
+    .function_box {
+      width: auto;
+      height: 50px;
+      position: relative;
+      .write_btn {
+        position: absolute;
+        right: 0;
+        top: -50px;
+      }
+    }
+    table {
+      width: 100%;
+      border-top: 2px solid #545454;
+      border-bottom: 2px solid #545454;
+      text-align: center;
+      border-collapse: collapse;
+      font-family: "KOTRA_BOLD-Bold", sans-serif;
+      color: #2a2a2a;
+      margin: 0 auto 110px;
+      tr {
+        border-bottom: 1px solid #c8c8c8;
+        height: 35px;
+      }
+      thead {
+        tr {
+          background-color: #f5f5f5;
+          td {
+            font-size: 11px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 11px;
+            a {
+              color: #2a2a2a;
+            }
+          }
+        }
+      }
+    }
+  }
+} // 1024px
+
+@media (max-width: 766px) {
+  .board_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid white;
+    text-align: center;
+    img {
+      margin: 57px 0;
+    }
+    .function_box {
+      width: 90%;
+      height: 50px;
+      .write_btn {
+        height: 36px;
+        position: relative;
+        margin: 0 auto;
+        float: right;
+        img {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    table {
+      width: 90%;
+      border-top: 2px solid #545454;
+      border-bottom: 2px solid #545454;
+      text-align: center;
+      border-collapse: collapse;
+      font-family: "KOTRA_BOLD-Bold", sans-serif;
+      color: #2a2a2a;
+      margin: 0 auto;
+      tr {
+        border-bottom: 1px solid #c8c8c8;
+        height: 35px;
+      }
+      thead {
+        tr {
+          background-color: #f5f5f5;
+          td {
+            font-size: 0.5em;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 0.5em;
+            a {
+              color: #2a2a2a;
+            }
+          }
+          td:nth-of-type(3) {
+            width: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .paging_box {
+      width: 300px;
+      margin: 20px auto;
+      text-align: center;
+      span {
+        height: 20px;
+        border: 1px solid #cccccc;
+        margin: 5px;
+        padding: 0px 10px;
+        font-size: 12px;
+        display: inline-block;
+        color: #444444;
+        cursor: pointer;
+        img {
+          width: 10px;
+        }
+      }
+      .prev {
+        float: left;
+        img {
+          margin: 5px 0;
+        }
+      }
+      .next {
+        float: right;
+        img {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 419px) {
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/layout.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/nav.css">
+    <link rel="stylesheet" href="../public/css/inquiry_view.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <title>어컴퍼니</title>
+</head>
+<body>
+   
+    <%-header%>
+    <%-nav%>
+    <div class="board_container">
+        <img src="../public/img/review/title.png" class="title_img" alt="타이틀">
+        <div class="function_box">
+            <a href="/review/write" class="write_btn">
+                <img src="../public/img/inquiry/write_btn.png" alt="글쓰기 버튼">
+            </a>
+        </div>
+        <form action="/review/writeAction" method="post">
+            <table>
+                <tr>
+                    <td>제목</td>
+                    <td><input type="text" name="title" id="title" maxlength="500" value="<%-title%>" readonly></td>
+                    <td>작성자</td>
+                    <td><input type="text" name="name" id="name" maxlength="50" value="<%-name%>" readonly></td>
+                    <td>상담종류</td>
+                    <td><%-category%></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <textarea name="text" id="text" id="text" readonly><%-text%></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan ="6">
+                        <a href="/review">목록</a>
+                        <a href="/review/delete/<%-page%>" class="delete_btn">삭제</a>
+                        <a href="/review/update/<%-page%>" class="update_btn">수정</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="comment_container" id="comment_box" value="<%-page%>">
+        <table class="comment_list_container">
+            <thead>
+                <tr>
+                    <td>댓글</td>
+                    <td>작성자</td>
+                    <td>내용</td>
+                    <td>기타</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="paging_box">
+            <span class="prev"><img src="../public/img/inquiry/paging_left.png" alt="왼쪽 화살표"></span>
+            <span class="next"><img src="../public/img/inquiry/paging_right.png" alt="오른쪽 화살표"></span>
+        </div>
+        <script src="../public/js/review_comment/browser.js"></script>
+        <script src="../public/js/review_comment/index.js" type="text/babel" data-presets="es2015,stage-2"></script>
+    </div>
+    <div class="comment_form_container">
+        <form action="/review/commentWriteAction/<%-page%>" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <td>작성자</td>
+                        <td><input type="text" name="name" required></td>
+                        <td>비밀번호</td>
+                        <td><input type="password" name="psw" required></td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td colspan="3">
+                            <textarea name="text" id="" required></textarea>
+                            <input type="submit" value="작성" style="height:130px;">
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </div>
+    <div class="comment_form_container comment_update_form" id="comment_update" style="display:none">
+        <form action="" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <td>작성자</td>
+                        <td><input type="text" name="name" class="name_input" required></td>
+                        <td>비밀번호</td>
+                        <td><input type="password" name="psw" class="psw_input" required></td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td colspan="3">
+                            <textarea name="text" id="text2" class="text_input" required></textarea>
+                            <input type="submit" value="수정">
+                            <input type="button" class="comment_cancel_btn" value="취소">
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </div>
+    <script src="../public/js/review/textareaHeightAuto.js" type="text/babel" data-presets="es2015,stage-2"></script>
+    <script src="../public/js/review_comment/update.js" type="text/babel" data-presets="es2015,stage-2"></script>
+    <%-footer%>
+</body>
+</html>

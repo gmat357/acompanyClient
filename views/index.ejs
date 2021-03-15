@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/layout.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/nav.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="../public/js/main/index.js"></script>
+    <title>어컴퍼니</title>
+    <style>
+    
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+    
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+    
+
+      </style>
+</head>
+<body>
+   
+    <%-header%>
+    <%-nav%>
+    <main class="main_container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../public/img/main/1.jpg" alt="슬라이드 이미지"/></div>
+                <div class="swiper-slide"><img src="../public/img/main/2.jpg" alt="슬라이드 이미지"/></div>
+                <div class="swiper-slide"><img src="../public/img/main/3.jpg" alt="슬라이드 이미지"/></div>
+            </div>
+            
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay:{
+                    delay:2000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+            });
+        </script>
+        <div class="consulting_box">
+            <ul>
+                <li><img src="../public/img/main/consulting_1.png" alt="상담신청"></li>
+                <li><img src="../public/img/main/consulting_2.png" alt="상담신청"></li>
+            </ul>
+        </div>
+        <div class="price_introduce" >
+            <h3>인터넷 + TV + 전화</h3>
+            <p>어컴퍼니에서 인터넷, TV, 전화 결합으로 더 풍성한 가입 사은품을 받아보세요.</p>
+        </div>
+        <div class="price_content">
+            <ul>
+                <li>
+                    <img src="../public/img/main/sk.png" alt="sk">
+                    <h3>풍성한 혜택과 선물이<br>가득 더욱 풍성해진 혜택</h3>
+                    <p>sk브로드밴드만의 특별한 상품과<br>다양한 혜택을 누리세요!</p>
+                    <a href="/sk">요금제 상세보기</a>
+                </li>
+                <li>
+                    <img src="../public/img/main/kt.png" alt="kt">
+                    <h3>10년연속 압도적인 1위<br>olleh 인터넷, TV, 전화</h3>
+                    <p>신규 가입 시, 50% 요금할인도<br>받고, 사은품도 받으세요.</p>
+                    <a href="/kt">요금제 상세보기</a>
+                </li>
+                <li>
+                    <img src="../public/img/main/lg.png" alt="lg">
+                    <h3>LG유플러스는 늘 고객의<br>시선에서 생각합니다.</h3>
+                    <p>대용량 콘텐츠도 끊임 없이<br>즐길 수 있는 U+인터넷</p>
+                    <a href="/lg">요금제 상세보기</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content_introduce" >
+            <h3>통신사별 EVENT</h3>
+            <p>어컴퍼니에서 통신사별 이벤트 확인하시고 혜택 받아 가세요!</p>
+        </div>
+        <div class="content_box">
+            <ul>
+                <li><img src="../public/img/main/content_sk.png" alt="sk컨텐츠"></li>
+                <li><img src="../public/img/main/content_kt.png" alt="kt컨텐츠"></li>
+                <li><img src="../public/img/main/content_lg.png" alt="lg컨텐츠"></li>
+                
+            </ul>
+        </div>
+        <div class="join_introduce">
+            <h3>가입 절차 안내</h3>
+            <p>어컴퍼니에서 무료 상담 받으시고 사은품까지 챙겨 가세요!</p>
+        </div>
+
+        <div class="join_content">
+            <img src="../public/img/main/join_step.png" alt="가입절차">
+        </div>
+
+        <div class="join_introduce">
+            <h3>빠른 상담 신청</h3>
+            <p>어컴퍼니에서 무료 상담 받으시고 사은품까지 챙겨 가세요!</p>
+        </div>
+
+        <div class="consulting_content">
+            <div class="consulting_form">
+                <form action="/main_consulting" method="post">
+                    <ul>
+                        <li><img src="../public/img/main/consulting_box.png" alt="상담아이콘"></li>
+                        <li><input type="text" placeholder="성함" name="name" maxlength="50" required></li>
+                        <li><input type="text" placeholder="전화번호" name="phone" maxlength="50" required></li>
+                        <li><input type="text" placeholder="상담내용" name="text" maxlength="5000" required></li>
+                        <li><input type="submit" value="상담신청"></li>
+                        <li><input type="checkbox" name="privacy" value="개인정보 동의함" id="privacy"><b>개인정보 활용 동의<a href="/privacy" target="blank" class="privacy_btn">[보기]</a></b></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%-footer%>
+</body>
+</html>

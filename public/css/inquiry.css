@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500&display=swap");
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+.nanumbarungothic * {
+  font-family: "NanumBarunGothic", sans-serif;
+}
+
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.board_container {
+  width: 1920px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.board_container img {
+  margin: 57px 0;
+}
+
+.board_container .function_box {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.board_container .function_box .write_btn {
+  height: 36px;
+  position: relative;
+  float: right;
+}
+
+.board_container .function_box .write_btn img {
+  position: absolute;
+  right: -4px;
+  top: -50px;
+}
+
+.board_container table {
+  width: 1200px;
+  border-top: 2px solid #545454;
+  border-bottom: 2px solid #545454;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: "KOTRA_BOLD-Bold", sans-serif;
+  color: #2a2a2a;
+  margin: 0 auto;
+}
+
+.board_container table tr {
+  border-bottom: 1px solid #c8c8c8;
+  height: 35px;
+}
+
+.board_container table thead tr {
+  background-color: #f5f5f5;
+}
+
+.board_container table thead tr td {
+  font-size: 11px;
+}
+
+.board_container table tbody tr td {
+  font-size: 11px;
+}
+
+.board_container table tbody tr td a {
+  color: #2a2a2a;
+}
+
+.board_container .paging_box {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.board_container .paging_box span {
+  height: 20px;
+  border: 1px solid #cccccc;
+  margin: 5px;
+  padding: 0px 10px;
+  font-size: 12px;
+  display: inline-block;
+  color: #444444;
+  cursor: pointer;
+}
+
+.board_container .paging_box span img {
+  width: 10px;
+}
+
+.board_container .paging_box .prev {
+  float: left;
+}
+
+.board_container .paging_box .prev img {
+  margin: 5px 0;
+}
+
+.board_container .paging_box .next {
+  float: right;
+}
+
+.board_container .paging_box .next img {
+  margin: 5px 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .board_container .title_img {
+    margin-right: 590px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .board_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid white;
+    text-align: center;
+  }
+  .board_container img {
+    margin: 57px 0;
+  }
+  .board_container .function_box {
+    width: auto;
+    height: 50px;
+    position: relative;
+  }
+  .board_container .function_box .write_btn {
+    position: absolute;
+    right: 0;
+    top: -50px;
+  }
+  .board_container table {
+    width: 100%;
+    border-top: 2px solid #545454;
+    border-bottom: 2px solid #545454;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+    color: #2a2a2a;
+    margin: 0 auto 110px;
+  }
+  .board_container table tr {
+    border-bottom: 1px solid #c8c8c8;
+    height: 35px;
+  }
+  .board_container table thead tr {
+    background-color: #f5f5f5;
+  }
+  .board_container table thead tr td {
+    font-size: 11px;
+  }
+  .board_container table tbody tr td {
+    font-size: 11px;
+  }
+  .board_container table tbody tr td a {
+    color: #2a2a2a;
+  }
+}
+
+@media (max-width: 766px) {
+  .board_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid white;
+    text-align: center;
+  }
+  .board_container img {
+    margin: 57px 0;
+  }
+  .board_container .function_box {
+    width: 90%;
+    height: 50px;
+  }
+  .board_container .function_box .write_btn {
+    height: 36px;
+    position: relative;
+    margin: 0 auto;
+    float: right;
+  }
+  .board_container .function_box .write_btn img {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .board_container table {
+    width: 90%;
+    border-top: 2px solid #545454;
+    border-bottom: 2px solid #545454;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: "KOTRA_BOLD-Bold", sans-serif;
+    color: #2a2a2a;
+    margin: 0 auto;
+  }
+  .board_container table tr {
+    border-bottom: 1px solid #c8c8c8;
+    height: 35px;
+  }
+  .board_container table thead tr {
+    background-color: #f5f5f5;
+  }
+  .board_container table thead tr td {
+    font-size: 0.5em;
+  }
+  .board_container table tbody tr td {
+    font-size: 0.5em;
+  }
+  .board_container table tbody tr td a {
+    color: #2a2a2a;
+  }
+  .board_container table tbody tr td:nth-of-type(3) {
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .board_container .paging_box {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .board_container .paging_box span {
+    height: 20px;
+    border: 1px solid #cccccc;
+    margin: 5px;
+    padding: 0px 10px;
+    font-size: 12px;
+    display: inline-block;
+    color: #444444;
+    cursor: pointer;
+  }
+  .board_container .paging_box span img {
+    width: 10px;
+  }
+  .board_container .paging_box .prev {
+    float: left;
+  }
+  .board_container .paging_box .prev img {
+    margin: 5px 0;
+  }
+  .board_container .paging_box .next {
+    float: right;
+  }
+  .board_container .paging_box .next img {
+    margin: 5px 0;
+  }
+}

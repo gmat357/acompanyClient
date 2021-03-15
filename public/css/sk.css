@@ -1,0 +1,187 @@
+.kt_container {
+  width: 1920px;
+}
+
+.kt_container .kt_box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.kt_container .kt_box .olleh_kt {
+  width: 1000px;
+  border: 2px solid #ffa601;
+  border-radius: 50px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.kt_container .kt_box .olleh_kt img {
+  margin: 50px 0;
+}
+
+.kt_container .kt_box .olleh_kt h3 {
+  font-size: 40px;
+  color: #333333;
+}
+
+.kt_container .kt_box .olleh_kt h5 {
+  margin: 40px 0px;
+  color: #e51937;
+  font-size: 16px;
+}
+
+.kt_container .kt_box .olleh_kt .sub_title {
+  text-align: right;
+  font-size: 12.8px;
+  color: #000000;
+  margin: 50px;
+}
+
+.kt_container .kt_box .olleh_kt_table {
+  width: 914px;
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+.kt_container .kt_box .olleh_kt_table thead tr {
+  background-color: #e51937;
+  color: white;
+  height: 50px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.kt_container .kt_box .olleh_kt_table thead tr td {
+  border: 1px solid #d3d2d2;
+}
+
+.kt_container .kt_box .olleh_kt_table tbody tr {
+  height: 50px;
+  font-size: 14px;
+}
+
+.kt_container .kt_box .olleh_kt_table tbody tr td {
+  border: 1px solid #d3d2d2;
+  font-weight: normal;
+}
+
+.kt_container .kt_box .olleh_kt_table tbody tr td[rowspan="2"] {
+  font-weight: bold;
+}
+
+.kt_container .kt_box .olleh_kt_table tbody tr .impact {
+  color: red;
+  font-size: 16px;
+}
+
+.kt_container .kt_box h4 {
+  font-size: 18px;
+  text-align: left;
+  margin: 30px 50px;
+}
+
+.kt_container .kt_box .notice {
+  text-align: left;
+  margin: 30px 50px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+  .kt_container {
+    width: auto;
+  }
+  .kt_container .kt_box {
+    width: auto;
+  }
+  .kt_container .kt_box .olleh_kt {
+    width: auto;
+  }
+  .kt_container .kt_box .olleh_kt .sub_title {
+    font-size: 12.8px;
+  }
+  .kt_container .kt_box .olleh_kt_table {
+    width: 600px;
+  }
+  .kt_container .kt_box .olleh_kt_table thead tr {
+    font-size: 14px;
+  }
+  .kt_container .kt_box .olleh_kt_table tbody tr {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 766px) {
+  .kt_container {
+    width: auto;
+  }
+  .kt_container .kt_box {
+    width: auto;
+    margin: 0 auto;
+  }
+  .kt_container .kt_box .olleh_kt {
+    width: 100%;
+    border: 2px solid #ffa601;
+    border-radius: 20px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .kt_container .kt_box .olleh_kt img {
+    margin: 25px 0;
+  }
+  .kt_container .kt_box .olleh_kt h3 {
+    font-size: 1.2em;
+    color: #333333;
+  }
+  .kt_container .kt_box .olleh_kt h5 {
+    margin: 2px 0px;
+    color: #e51937;
+    font-size: 1em;
+  }
+  .kt_container .kt_box .olleh_kt .sub_title {
+    text-align: center;
+    font-size: 0.8em;
+    color: #000000;
+    margin: 2px;
+  }
+  .kt_container .kt_box .olleh_kt_table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  .kt_container .kt_box .olleh_kt_table thead tr {
+    background-color: #e51937;
+    color: white;
+    height: 50px;
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+  .kt_container .kt_box .olleh_kt_table thead tr td {
+    border: 1px solid #d3d2d2;
+  }
+  .kt_container .kt_box .olleh_kt_table tbody tr {
+    height: 50px;
+    font-size: 0.5em;
+  }
+  .kt_container .kt_box .olleh_kt_table tbody tr td {
+    border: 1px solid #d3d2d2;
+    font-weight: normal;
+  }
+  .kt_container .kt_box .olleh_kt_table tbody tr td[rowspan="2"] {
+    font-weight: bold;
+  }
+  .kt_container .kt_box .olleh_kt_table tbody tr .impact {
+    color: red;
+  }
+  .kt_container .kt_box h4 {
+    font-size: 0.8em;
+    text-align: left;
+    margin: 30px 50px;
+  }
+  .kt_container .kt_box .notice {
+    text-align: left;
+    margin: 30px 10px;
+    font-size: 0.6em;
+    font-weight: normal;
+  }
+}

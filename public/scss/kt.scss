@@ -1,0 +1,176 @@
+@import "variable";
+
+.kt_container {
+  width: $layout_width;
+  .kt_box {
+    width: $content_width;
+    margin: 0 auto;
+    .olleh_kt {
+      width: 1000px;
+      border: 2px solid #c1282d;
+      border-radius: 50px;
+      margin: 100px auto;
+      text-align: center;
+      img {
+        margin: 50px 0;
+      }
+      h3 {
+        font-size: 40px;
+        color: #333333;
+      }
+      h5 {
+        margin: 40px 0px;
+        color: red;
+        font-size: 16px;
+      }
+      .sub_title {
+        text-align: right;
+        font-size: 12.8px;
+        color: #000000;
+        margin: 50px;
+      }
+    }
+    .olleh_kt_table {
+      width: 914px;
+      margin: 50px auto;
+      border-collapse: collapse;
+      thead {
+        tr {
+          background-color: #333333;
+          color: white;
+          height: 50px;
+          font-size: 14px;
+          font-weight: bold;
+          td {
+            border: 1px solid #d3d2d2;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 50px;
+          font-size: 14px;
+          td {
+            border: 1px solid #d3d2d2;
+          }
+          td[rowspan="2"] {
+            font-weight: bold;
+          }
+          .impact {
+            color: red;
+            font-size: 16px;
+          }
+        }
+      }
+    } // olleh_kt_table
+    h4 {
+      font-size: 18px;
+      text-align: left;
+      margin: 30px 50px;
+    }
+    .notice {
+      text-align: left;
+      margin: 30px 50px;
+      font-size: 12px;
+    }
+  } // kt_box
+}
+
+@media (max-width: 1024px) {
+  .kt_container {
+    width: auto;
+    .kt_box {
+      width: auto;
+      .olleh_kt {
+        width: auto;
+        .sub_title {
+          font-size: 12.8px;
+        }
+      }
+      .olleh_kt_table {
+        width: 600px;
+        thead {
+          tr {
+            font-size: 14px;
+          }
+        }
+        tbody {
+          tr {
+            font-size: 12px;
+          }
+        }
+      } // olleh_kt_table
+    } // kt_box
+  }
+}
+
+@media (max-width: 766px) {
+  .kt_container {
+    width: auto;
+    .kt_box {
+      width: auto;
+      margin: 0 auto;
+      .olleh_kt {
+        width: 100%;
+        border-radius: 20px;
+        margin: 50px auto;
+        text-align: center;
+        img {
+          margin: 25px 0;
+        }
+        h3 {
+          font-size: 1.2em;
+        }
+        h5 {
+          margin: 2px 0px;
+          font-size: 1em;
+        }
+        .sub_title {
+          text-align: center;
+          font-size: 0.8em;
+          margin: 2px;
+        }
+      }
+      .olleh_kt_table {
+        width: 100%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        thead {
+          tr {
+            color: white;
+            height: 50px;
+            font-size: 0.6em;
+            font-weight: bold;
+            td {
+            }
+          }
+        }
+        tbody {
+          tr {
+            height: 50px;
+            font-size: 0.5em;
+            td {
+              font-weight: normal;
+            }
+            td[rowspan="2"] {
+              font-weight: bold;
+            }
+            .impact {
+            }
+          }
+        }
+      } // olleh_kt_table
+      h4 {
+        font-size: 0.8em;
+        text-align: left;
+        margin: 30px 50px;
+      }
+      .notice {
+        text-align: left;
+        margin: 30px 10px;
+        font-size: 0.6em;
+        font-weight: normal;
+      }
+    } // kt_box
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/layout.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/nav.css">
+    <link rel="stylesheet" href="../public/css/review_write.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <script src="../../node_modules/ckeditor4/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <title>어컴퍼니</title>
+</head>
+<body>
+   
+    <%-header%>
+    <%-nav%>
+    <div class="board_container">
+        <img src="../public/img/event/title.png" class="title_img" alt="타이틀">
+        <div class="function_box">
+            <a href="/event/write" class="write_btn">
+                <img src="../public/img/inquiry/write_btn.png" alt="글쓰기 버튼">
+            </a>
+        </div>
+        <form action="/event/updateAction/<%-page%>" method="post">
+            <table>
+                <tr>
+                    <td>제목</td>
+                    <td><input type="text" name="title" id="title" maxlength="500" value ="<%-title%>" required></td>
+                    <td>작성자</td>
+                    <td><input type="text" name="name" id="name" maxlength="50" value ="<%-name%>" required></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <textarea name="text" id="text" cols="30" rows="10" id="text" maxlength="5000" required><%-text%></textarea>
+                    </td>
+                    <script>
+                        $(function(){
+                            $(document).ready(function(){
+                    
+                                CKEDITOR.replace("text",{filebrowserUploadUrl:'/event/imgUpload'});
+                            });
+                        });
+                    </script>
+                </tr>
+                <tr>
+                    <td colspan ="6">
+                        <input type="password" placeholder="비밀번호" maxlength="20" name="psw" value="<%-psw%>" required>
+                        <input type="submit" value="수정" class="insert_btn">
+                        <a href="/event">취소</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <%-footer%>
+</body>
+</html>
