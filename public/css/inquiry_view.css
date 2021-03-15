@@ -314,7 +314,7 @@
     margin-right: 590px;
   }
   .board_container table tr:nth-of-type(2) td #text {
-    height: 500px;
+    height: auto;
   }
   .comment_container table tbody tr td:nth-of-type(3) textarea {
     height: 200px;
