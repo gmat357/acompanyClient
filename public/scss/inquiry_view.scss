@@ -24,6 +24,7 @@
   }
   table {
     width: $content_width;
+    height:auto;
     border-top: 2px solid #545454;
     border-bottom: 2px solid #545454;
     text-align: center;
@@ -71,6 +72,7 @@
         #text {
           width: 97.5%;
           white-space: pre-line;
+          overflow: scroll;
           height: auto;
           padding: 15px;
           margin: 10px 0;
@@ -472,11 +474,7 @@
             resize: none;
             outline: none;
             font-family: "Noto Sans KR", sans-serif;
-            p{
-              img{
-                width:100%;
-              }
-            }
+
             img{
               width:100%;
             }
