@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 
 var layout = require('../lib/layout').layout();
 var db = require('../lib/mysql').db();
-var date = require('../lib/date').date();
 
 var board_name = "inquiry";
 var db_list_name = "inquiry_list";
@@ -54,6 +53,7 @@ router.post(`/${board_name}/writeAction`,(req,res)=>{
     var psw = body.psw;
     var category = body.category;
     var text = body.text;
+    var date = require('../lib/date').date();
     var insert_date = date;
     var sql = {
         title:title,
@@ -142,6 +142,7 @@ router.post(`/${board_name}/updateAction/:page`,(req,res)=>{
     var category = body.category;
     var text = body.text;
     var psw = body.psw;
+    var date = require('../lib/date').date();
     var sql = {
         title:title,
         name:name,
@@ -199,6 +200,7 @@ router.post(`/${board_name}/commentWriteAction/:page`,(req,res)=>{
     var name = body.name;
     var psw = body.psw;
     var text = body.text;
+    var date = require('../lib/date').date();
     var insert_date = date;
     var page = req.params.page;
     var sql = {
@@ -279,6 +281,7 @@ router.post(`/${board_name}/commentUpdateAction/:page`,(req,res)=>{
     var name = body.name;
     var psw = body.psw;
     var text = body.text;
+    var date = require('../lib/date').date();
     var sql = {
         name:name,
         psw:psw,

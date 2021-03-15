@@ -185,6 +185,10 @@
   cursor: pointer;
 }
 
+.comment_container table tbody tr td:nth-of-type(2) h6 {
+  font-size: 18px;
+}
+
 .comment_container table tbody tr td:nth-of-type(3) {
   width: 700px;
 }

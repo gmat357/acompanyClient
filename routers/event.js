@@ -7,7 +7,6 @@ var path = require('path');
 
 var layout = require('../lib/layout').layout();
 var db = require('../lib/mysql').db();
-var date = require('../lib/date').date();
 var fs = require('fs');
 
 var board_name = "event";
@@ -73,6 +72,7 @@ router.post(`/${board_name}/writeAction`,(req,res)=>{
     var name = body.name;
     var psw = body.psw;
     var text = body.text;
+    var date = require('../lib/date').date();
     var insert_date = date;
     var textArr = text.split(" ");
     var imgSrc = [];
@@ -243,6 +243,7 @@ router.post(`/${board_name}/commentWriteAction/:page`,(req,res)=>{
     var name = body.name;
     var psw = body.psw;
     var text = body.text;
+    var date = require('../lib/date').date();
     var insert_date = date;
     var page = req.params.page;
     var sql = {
@@ -323,6 +324,7 @@ router.post(`/${board_name}/commentUpdateAction/:page`,(req,res)=>{
     var name = body.name;
     var psw = body.psw;
     var text = body.text;
+    var date = require('../lib/date').date();
     var sql = {
         name:name,
         psw:psw,
