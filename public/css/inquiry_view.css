@@ -190,6 +190,10 @@
   cursor: pointer;
 }
 
+.comment_container table tbody tr td:nth-of-type(2) h6 {
+  font-size: 16px;
+}
+
 .comment_container table tbody tr td:nth-of-type(3) {
   width: 700px;
 }
@@ -200,6 +204,7 @@
   resize: none;
   outline: none;
   padding: 15px;
+  font-size: 12px;
   font-family: "KOTRA_BOLD-Bold", sans-serif;
 }
 
