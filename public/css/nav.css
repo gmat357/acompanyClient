@@ -143,15 +143,6 @@
     font-size: 0.8em;
     margin: 20px 0px;
   }
-  .nav_container .nav_box .menu_box li a[href="/sk"] {
-    color: #e51937;
-  }
-  .nav_container .nav_box .menu_box li a[href="/lg"] {
-    color: #c20053;
-  }
-  .nav_container .nav_box .menu_box li a[href="/kt"] {
-    color: #444444;
-  }
   .nav_container .nav_box .menu_box li a {
     color: black;
     font-family: "NanumBarunGothic", sans-serif;
@@ -196,15 +187,6 @@
     display: inline-block;
     font-size: 0.5em;
     margin: 20px 0px;
-  }
-  .nav_container .nav_box .menu_box li a[href="/sk"] {
-    color: #e51937;
-  }
-  .nav_container .nav_box .menu_box li a[href="/lg"] {
-    color: #c20053;
-  }
-  .nav_container .nav_box .menu_box li a[href="/kt"] {
-    color: #444444;
   }
   .nav_container .nav_box .menu_box li a {
     color: black;
