@@ -322,6 +322,21 @@
   color: #717171;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .swiper-container {
+    width: 1920px;
+    height: 450px;
+    display: inline-block;
+  }
+  .swiper-container .swiper-pagination span {
+    background-color: black;
+  }
+  .swiper-container .swiper-button-next,
+  .swiper-container .swiper-button-prev {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .main_container {
     width: auto;
