@@ -243,6 +243,27 @@
   }
 } // main_container
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .swiper-container {
+    width: $layout_width;
+    height: 450px;
+    display: inline-block;
+    img {
+      //   width: 100%;
+    }
+    .swiper-pagination {
+      span {
+        background-color: black;
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display:none;
+    }
+  } // swiper-container
+}
+
+
 @media (max-width: 1024px) {
   .main_container {
     width: auto;

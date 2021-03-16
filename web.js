@@ -103,3 +103,12 @@ app.post('/event/commentGetData/:page',eventRouter);
 
 app.listen(port,()=>{console.log(`${port}번 포트 서버가 열렸습니다.`)});
 
+// process.on('uncaughtException', function (err) {
+//     console.log('Caught exception: ' + err);
+//   });
+  
+//   setTimeout(function () {
+//     console.log('This will still run.');
+//   }, 500);
+  
+//   console.log('This will not run.');
