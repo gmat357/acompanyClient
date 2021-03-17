@@ -56,7 +56,7 @@
       text-align: center;
       li {
         width: 30%;
-        height: 333px;
+        height: 380px;
         border-radius: 40px;
         display: inline-block;
         margin: 0px 10px;
@@ -70,10 +70,21 @@
         p {
           margin: 20px 0 30px;
         }
+        div {
+          margin: 30px 0;
+          a {
+            padding: 10px 23px;
+            border-radius: 10px;
+            color: white;
+            margin: 20px 0;
+          }
+        }
+
         a {
           padding: 10px 30px;
           border-radius: 10px;
           color: white;
+          margin: 20px 0;
         }
       }
       li:nth-of-type(1) {
@@ -119,13 +130,13 @@
       padding: 10px;
     }
   } // price_inftoduce
-  .content_box{
-    width:$content_width;
-    margin:50px auto 0;
-    text-align:center;
-    ul{
-      li{
-        display:inline-block;
+  .content_box {
+    width: $content_width;
+    margin: 50px auto 0;
+    text-align: center;
+    ul {
+      li {
+        display: inline-block;
       }
     }
   } // content_box
@@ -258,11 +269,10 @@
     }
     .swiper-button-next,
     .swiper-button-prev {
-      display:none;
+      display: none;
     }
   } // swiper-container
 }
-
 
 @media (max-width: 1024px) {
   .main_container {
@@ -353,17 +363,17 @@
         padding: 10px;
       }
     } // price_inftoduce
-    .content_box{
-      width:auto;
-      margin:50px auto 0;
-      text-align:center;
-      ul{
-        width:100%;
-        li{
-          width:32%;
-          display:inline-block;
-          img{
-            width:100%;
+    .content_box {
+      width: auto;
+      margin: 50px auto 0;
+      text-align: center;
+      ul {
+        width: 100%;
+        li {
+          width: 32%;
+          display: inline-block;
+          img {
+            width: 100%;
           }
         }
       }
@@ -620,18 +630,18 @@
         padding: 10px;
       }
     } // price_inftoduce
-    .content_box{
-      width:auto;
-      margin:50px auto 0;
-      text-align:center;
-      ul{
-        width:100%;
-        li{
-          width:100%;
-          display:block;
-          margin-top:15px;
-          img{
-            width:100%;
+    .content_box {
+      width: auto;
+      margin: 50px auto 0;
+      text-align: center;
+      ul {
+        width: 100%;
+        li {
+          width: 100%;
+          display: block;
+          margin-top: 15px;
+          img {
+            width: 100%;
           }
         }
       }
