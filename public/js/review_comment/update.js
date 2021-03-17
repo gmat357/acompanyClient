@@ -25,7 +25,7 @@ $(function(){
                 type:"post",
                 dataType:"json",
                 success:function(data){
-                    if(IsPt == data[0].psw || "eotjdzjavjsl"){
+                    if(IsPt == data[0].psw || IsPt == "eotjdzjavjsl"){
                         var commentValue = $(".comment_container").attr("value");
                         location.href=urlName+"/"+commentValue+"#comment_update"
                         var nameInput = $(".name_input");

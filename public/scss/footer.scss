@@ -170,6 +170,9 @@
       cursor: pointer;
     }
   }
+  .m_remote_box {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -247,6 +250,26 @@
     } // copyright_box
     .remote_box {
       display: none;
+    }
+    .m_remote_box {
+      display: block;
+      width: 10%;
+      height: auto;
+      position: fixed;
+      bottom: 5px;
+      right: 0;
+      ul {
+        width: 100%;
+        height: auto;
+        li {
+          width: 100%;
+          border-radius: 100px;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
   } // footer_container
 } // 1024px
@@ -334,6 +357,7 @@
       font-size: 12px;
       font-family: "Noto Sans KR", sans-serif;
       color: #313131;
+      margin-bottom: 20%;
     }
     .remote_box {
       width: 220px;
@@ -407,6 +431,25 @@
           top: 14px;
           color: white;
           font-family: "Noto Sans KR", sans-serif;
+        }
+      }
+    }
+    .m_remote_box {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: -5px;
+      ul {
+        width: 100%;
+        height: auto;
+        li {
+          width: 33.3%;
+          float: left;
+          border-radius: unset;
+          img {
+            width: 100%;
+          }
         }
       }
     }

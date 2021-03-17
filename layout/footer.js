@@ -58,6 +58,23 @@ exports.footer = (rows)=>{
             <div class="top_btn">TOP</div>
             <script src="../public/js/footer/index.js"></script>
         </div>
+        <div class="m_remote_box">
+            <ul>
+                <li>
+                <img src="../public/img/footer/call_box.png" alt="전화">
+                </li>
+                <li>
+                <a href="${kakao}">
+                <img src="../public/img/footer/kakao_box.png" alt="카카오">
+                </a>
+                </li>
+                <li>
+                <a href="${naver}">
+                <img src="../public/img/footer/naver_box.png" alt="네이버">
+                </a>
+                </li>
+            </ul>
+        </div>
     </footer>
     `
 

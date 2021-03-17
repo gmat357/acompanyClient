@@ -83,6 +83,15 @@ router.post(`/${board_name}/writeAction`,(req,res)=>{
         }
     }
     var imgSrcResult = JSON.stringify(imgSrc);
+    if(psw != master_psw){
+        res.send(`
+            <script>
+                alert("관리자만 작성가능합니다.");
+                location.href="/";
+            </script>
+        `);
+        return;
+    }
     var sql = {
         title:title,
         name:name,

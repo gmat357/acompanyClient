@@ -24,7 +24,7 @@
   }
   table {
     width: $content_width;
-    height:auto;
+    height: auto;
     border-top: 2px solid #545454;
     border-bottom: 2px solid #545454;
     text-align: center;
@@ -75,12 +75,15 @@
           height: auto;
           padding: 15px;
           margin: 10px 0;
-          border: 1px solid #c8c8c8;
+          // border: 1px solid #c8c8c8;
           resize: none;
           outline: none;
           font-family: "Noto Sans KR", sans-serif;
-          img{
-            width:100%;
+          img {
+            width: 100%;
+          }
+          p {
+            font-size: 16px;
           }
         }
       }
@@ -140,9 +143,9 @@
             cursor: pointer;
           }
         }
-        td:nth-of-type(2){
-          h6{
-            font-size:16px;
+        td:nth-of-type(2) {
+          h6 {
+            font-size: 16px;
           }
         }
         td:nth-of-type(3) {
@@ -153,7 +156,7 @@
             resize: none;
             outline: none;
             padding: 15px;
-            font-size:12px;
+            font-size: 12px;
             font-family: "KOTRA_BOLD-Bold", sans-serif;
           }
         }
@@ -333,8 +336,8 @@
             height: 334px;
             padding: 15px;
             margin: 10px 0;
-            img{
-              width:100%;
+            img {
+              width: 100%;
             }
           }
         }
@@ -473,9 +476,8 @@
             resize: none;
             outline: none;
             font-family: "Noto Sans KR", sans-serif;
-
-            img{
-              width:100%;
+            img {
+              width: 100%;
             }
           }
         }
