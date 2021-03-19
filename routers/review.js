@@ -9,7 +9,7 @@ var db = require('../lib/mysql').db();
 var board_name = "review";
 var db_list_name = "review_list";
 var db_comment_name = "review_comment"
-var master_psw = "eotjdzjavjsl";
+var master_psw = "somang14881!";
 
 router.use(bodyParser.urlencoded({extended:false}));
 router.use(bodyParser.json());
@@ -96,41 +96,47 @@ router.get(`/${board_name}/:page`,(req,res)=>{
 
 router.get(`/${board_name}/update/:page`,(req,res)=>{
     var page = req.params.page;
-    db.query(`select * from ${db_list_name} where No = ?`, page,(err, rows)=>{
+    db.query('select * from link',(err,rows)=>{
         if(err) throw err;
-        res.send(`
-        <script>
-        var IsPt = prompt("비밀번호를 입력하세요.");
-        if(IsPt == "${rows[0].psw}" || IsPt == "${master_psw}"){
-            location.href="/${board_name}/update_page/${page}";
-        }else{
-            alert("비밀번호가 틀렸습니다.");
-            history.back();
-        }
-        </script>
-        `);
+    var render = {
+        header:layout.header.header(),
+        nav:layout.nav.nav(),
+        action:`/${board_name}/update_page/${page}`,
+        footer:layout.footer.footer(rows)
+    }
+    res.render('reviewPassword',render);
     });
 });
 
-router.get(`/${board_name}/update_page/:page`,(req,res)=>{
+router.post(`/${board_name}/update_page/:page`,(req,res)=>{
     var page = req.params.page;
+    var psw = req.body.psw;
     db.query(`select * from ${db_list_name} where No = ?`,page,(err, rows)=>{
         if(err) throw err;
-        db.query('select * from link',(err2,rows2)=>{
-            if(err2) throw err2;
-            var render = {
-                header:layout.header.header(),
-                nav:layout.nav.nav(),
-                title:rows[0].title,
-                name:rows[0].name,
-                category:rows[0].category,
-                text:rows[0].text,
-                psw:rows[0].psw,
-                page:page,
-                footer:layout.footer.footer(rows2)
-            }
-            res.render('review_update',render);
-        });
+        if(psw == rows[0].psw || psw == master_psw){
+            db.query('select * from link',(err2,rows2)=>{
+                if(err2) throw err2;
+                var render = {
+                    header:layout.header.header(),
+                    nav:layout.nav.nav(),
+                    title:rows[0].title,
+                    name:rows[0].name,
+                    category:rows[0].category,
+                    text:rows[0].text,
+                    psw:rows[0].psw,
+                    page:page,
+                    footer:layout.footer.footer(rows2)
+                }
+                res.render('review_update',render);
+            });
+        }else{
+            res.send(`
+                <script>
+                    alert("비밀번호가 틀립니다.");
+                    history.back();
+                </script>
+            `);
+        }
     });
 });
 
@@ -165,33 +171,43 @@ router.post(`/${board_name}/updateAction/:page`,(req,res)=>{
 
 router.get(`/${board_name}/delete/:page`,(req,res)=>{
     var page = req.params.page;
-    db.query(`select * from ${db_list_name} where No = ?`, page ,(err,rows)=>{
+    db.query('select * from link',(err,rows)=>{
         if(err) throw err;
-        res.send(`
-        <script>
-        var IsPt = prompt("비밀번호를 입력하세요.");
-        if(IsPt == "${rows[0].psw}" || IsPt == "${master_psw}"){
-            location.href="/${board_name}/deleteAction/${page}";
-        }else{
-            alert("비밀번호가 틀렸습니다.");
-            history.back();
-        }
-        </script>
-        `);
+    var render = {
+        header:layout.header.header(),
+        nav:layout.nav.nav(),
+        action:`/${board_name}/deleteAction/${page}`,
+        footer:layout.footer.footer(rows)
+    }
+    res.render('reviewPassword',render);
     });
 });
 
-router.get(`/${board_name}/deleteAction/:page`,(req,res)=>{
+router.post(`/${board_name}/deleteAction/:page`,(req,res)=>{
     var page = req.params.page;
-    db.query(`delete from ${db_list_name} where No = ?`,page,(err,rows)=>{
+    var psw = req.body.psw;
+    db.query(`select * from ${db_list_name} where No = ?`,page,(err,rows)=>{
         if(err) throw err;
-        db.query(`delete from ${db_comment_name} where page = ?`, page);
-        res.send(`
-            <script>
+        if(psw == rows[0].psw || psw == master_psw){
+
+            db.query(`delete from ${db_list_name} where No = ?`,page,(err2,rows2)=>{
+                if(err2) throw err2;
+                db.query(`delete from ${db_comment_name} where page = ?`, page);
+                res.send(`
+                <script>
                 alert("삭제되었습니다.");
                 location.href="/${board_name}";
+                </script>
+                `);
+            });
+        }else{
+            res.send(`
+            <script>
+                alert("비밀번호가 틀립니다.");
+                history.back();
             </script>
-        `)
+        `);
+        }
     });
 });
 

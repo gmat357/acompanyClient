@@ -1,0 +1,22 @@
+.board_container {
+  width: 1920px;
+  height: 200px;
+}
+
+.board_container form {
+  width: 400px;
+  padding: 50px 0;
+  margin: 50px auto;
+  text-align: center;
+  border: 1px solid #178fee;
+  font-size: 14px;
+}
+
+.board_container form input,
+.board_container form a {
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+}

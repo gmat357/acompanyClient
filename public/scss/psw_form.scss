@@ -1,0 +1,22 @@
+@import "variable";
+
+.board_container {
+  width: $layout_width;
+  height: 200px;
+  form {
+    width: $content_width - 800;
+    padding: 50px 0;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid #178fee;
+    font-size: 14px;
+    input,
+    a {
+      outline: none;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+    }
+  }
+}
