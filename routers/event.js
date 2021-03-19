@@ -230,7 +230,7 @@ router.get(`/${board_name}/deleteAction/:page`,(req,res)=>{
         var imgSrc = JSON.parse(rows[0].img_link);
         for(var i = 0; i < imgSrc.length; i++){
             fs.unlink(path.join(__dirname,`../${imgSrc[i]}`),(err)=>{
-                if(err) console.log("삭제할 파일이 없습니다.");
+                if(err) console.log(`${rows[0].title} : 삭제할 파일이 없습니다.`);
             });
         }
         
