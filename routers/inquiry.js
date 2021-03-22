@@ -110,7 +110,9 @@ router.get(`/${board_name}/update/:page`,(req,res)=>{
 
 router.post(`/${board_name}/update_page/:page`,(req,res)=>{
     var page = req.params.page;
+    var psw = req.body.psw;
     db.query(`select * from ${db_list_name} where No = ?`,page,(err, rows)=>{
+        if(err) throw err;
         if(psw == rows[0].psw || psw == master_psw){
             db.query('select * from link',(err2,rows2)=>{
                 if(err2) throw err2;
