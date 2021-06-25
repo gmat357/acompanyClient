@@ -1,6 +1,5 @@
 $(function(){
     var urlName = "/inquiry";
-    console.log("gd");
     $(window).load(function(){
         function formBlock(){
             var update_form = $(".comment_update_form");
